@@ -1,31 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Ubuntu:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap&family=Open+Sans:wght@500&display=swap');
 
 body {
   text-align: center;
   background-color: #deb887;
 }
 
-h1, h2, p {
+h1, h2, p, a, a:active {
   color: rgb(97, 124, 243);
+  text-decoration: none;
 }
 
 h1 {
   font-size: 40px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 h2 {
   font-size: 24px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Open Sans', serif;
 }
 
-p {
-  font-family: 'Ubuntu', sans-serif;
-  font-size: 20;
+p, a, a:active {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
 }
 
- 
+a {
+  -webkit-transition: color 250ms ease-in;
+  -moz-transition: color 250ms ease-in;
+  -ms-transition: color 250ms ease-in;
+  -o-transition: color 250ms ease-in;
+  transition: color 250ms ease-in;
 }
-li.menu_list:hover .front {
-    transform: rotateY(90deg);
+
+a:hover {
+  color: #9e3232;
+}
+
+.image {
+  border: 4px solid #837e7e;
+  cursor: zoom-in;
+}
+
+.swal-footer {
+  background-color: rgb(245, 248, 250);
+  margin-top: 32px;
+  border-top: 1px solid #9d9fa0;
+  overflow: hidden;
+}
+
+.swal-icon {
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 2px solid #837e7e;
+}
+
+.image {
+  position: relative;
+}
+
+.image:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
 }
