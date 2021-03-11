@@ -3,37 +3,74 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>CAUGHT CRITTERS</title>
+    <title>Caught Critters Feb-Mar</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link rel="shortcut icon" type="image/svg" href="r/favicon.svg"/>
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">             
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" type="text/javascript"></script>         
+    <!-- nanogallery2 -->
+    <link  href="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/css/nanogallery2.min.css" rel="stylesheet" type="text/css">
+    <script  type="text/javascript" src="https://cdn.jsdelivr.net/npm/nanogallery2@3/dist/jquery.nanogallery2.min.js"></script>
   </head>
   <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 <script src="script.js"></script>
     <img src="r/critters.svg" height="250" width="250">
     <h1>CAUGHT CRITTERS</h1>
-    <h2>(December to January 2020/21)</h2>
+    <h2>(February to March 2021)</h2>
     &nbsp;
-    <p>Image 1:</p>
-    <div onclick="img1()">
-    <img class="image" src="r/IMAG0047.JPG" width="320" height="180">
+        <!-- ### Gallery 1 for TC photos; mosaic layout ### -->
+    <div id="gallery1">
+    <div id="nanogallery2" style="text-align:center">
+      gallery_made_with_nanogallery2
     </div>
-    &nbsp;
-    <div onclick="img2()">
-    <p>Image 2:</p>
-    <img class="image" src="r/IMAG0061.JPG" width="320" height="180">
-    </div>
-    &nbsp;
-    <div onclick="img3()">
-    <p>Image 3:</p>
-    <img class="image" src="r/IMAG0123.JPG" width="320" height="180">
-    </div>
+      <script>
+        jQuery(document).ready(function () {
+        jQuery("#nanogallery2").nanogallery2( {
+          galleryDisplayMode: 'fullContent',
+          thumbnailHeight: 'auto', thumbnailWidth: '300',
+          thumbnailBaseGridHeight: 50,
+          thumbnailAlignment: 'fillWidth',
+          thumbnailL1GutterWidth: 4,
+          thumbnailL1GutterHeight: 4,
+          thumbnailBorderHorizontal: 5,
+          thumbnailBorderVertical: 5,
+          thumbnailLabel: { display: true, position:'onBottom',   hideIcons: true, titleFontSize: '1em', align: 'right', titleMultiLine:true, displayDescription: false},
+          thumbnailToolbarAlbum: null,
+          thumbnailToolbarImage :  { bottomRight : 'display' },
+          // THUMBNAIL'S HOVER ANIMATIONS
+          thumbnailHoverEffect2: 'label_translateY_0px_-20px|image_scale_1.00_1.10|image_rotateZ_0deg_3deg|image_translateY_0px_-20px|tools_opacity_0_1|tools_translateY_30px_0px',
+          touchAnimation: true,
+          touchAutoOpenDelay: 1200,
+          thumbnailDisplayTransition: 'slideUp2',
+          thumbnailDisplayTransitionDuration:  500,
+          thumbnailDisplayInterval:            30, 
+          // DISPLAY ANIMATION
+          thumbnailDisplayTransition: 'slideDown',
+          thumbnailDisplayTransitionDuration: 500,
+          thumbnailDisplayInterval: 30, 
+          galleryTheme : { 
+            thumbnail: { background: '#444', backgroundImage: 'linear-gradient(315deg, #111 0%, #557 90%)', borderColor: '#000', labelOpacity : 1, labelBackground: '#444', titleColor: '#eee', titleBgColor: '#444', titleShadow: '' } ,
+          },
+          // DEEP LINKING
+          locationHash: false,
+          // ### gallery content ### 
+          items: [
+            { src: 'r/img1.JPG', srct: 'r/img1.JPG', title: 'Coyote on the prowl' },
+            { src: 'r/img2.JPG', srct: 'r/img2.JPG', title: 'Bobcat in the night' },
+            { src: 'r/img3.JPG', srct: 'r/img3.JPG', title: 'Sleepy Doe!' },
+            ]
+          });
+       });
+      </script>
     &nbsp;
     <p>---------------</p>
-    <p>To attract these animals, we use <b>no</b> attractants or food.<br> It is all done completely naturally.</p>
+    <p>To attract these animals, we use <b>no</b> attractants or food.<br>Everything is completely natural.</p>
     <p>---------------</p>
     <a href="https://www.instagram.com/caughtcritters" target="_blank"><b>Visit us on Instagram</b></a>
     <p>---------------</p>
-    <p>© 2020 CaughtCritters and associates</p>
+    <p>© 2020 - 2021 CaughtCritters and associates</p>
   </body>
 </html>
